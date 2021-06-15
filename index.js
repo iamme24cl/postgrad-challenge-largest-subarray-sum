@@ -1,5 +1,5 @@
 /*
-  Use Kadane's Algorithm - Scan the entire array and at each position
+  Using Kadane's Algorithm - Scan the entire array and at each position
   find the maximum sum of the subarray ending there. This is achieved by 
   keeping a current_max for the the current index and a global_max
 
@@ -20,10 +20,10 @@ function largestSubarraySum(array) {
     return 0;
   }
 
-  const isLessThenZero = currentValue => currentValue < 0;
-  if (array.every(isLessThenZero)) {
-    return 0;
-  }
+  // const isLessThenZero = currentValue => currentValue < 0;
+  // if (array.every(isLessThenZero)) {
+  //   return 0;
+  // }
 
   let currentMax = array[0];
   let globalMax = array[0];
@@ -39,6 +39,7 @@ function largestSubarraySum(array) {
       globalMax = currentMax
     }
   }
+  if (globalMax < 0) return 0;
   return globalMax;
 }
 
