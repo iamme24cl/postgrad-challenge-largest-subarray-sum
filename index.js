@@ -42,4 +42,6 @@ function largestSubarraySum(array) {
   return globalMax;
 }
 
+// the big O for this algorithm is O(n)
+
 
